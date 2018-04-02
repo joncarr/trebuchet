@@ -115,7 +115,7 @@ type UserDB interface {
 }
 
 // userValidator is our validation layer that validates
-// and normalizess data before passing it on to the nest
+// and normalizes data before passing it on to the nest
 // UserDB in our interface chain
 type userValidator struct {
 	UserDB
@@ -471,7 +471,7 @@ func (uv *userValidator) emailIsAvail(user *User) error {
 	}
 
 	// if we get here that means we found a user with this email
-	// address, so we need to see if this is the same user er
+	// address, so we need to see if this is the same user or
 	// are updating, or if we have a conflict
 	if user.ID != existing.ID {
 		return ErrEmailTaken
@@ -489,6 +489,7 @@ func (uv *userValidator) passwordMinLength(user *User) error {
 	return nil
 }
 
+// Ensures we hashed the password
 func (uv *userValidator) passwordHashRequired(user *User) error {
 	if user.PasswordHash == "" {
 		return ErrPasswordRequired

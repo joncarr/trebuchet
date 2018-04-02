@@ -17,6 +17,10 @@ command is also passed along with the program.
     
   - datalayer - Empty, I'm assuming I will eventually use this for everything DB related.  I just needed to remind myself of
     the thing I still need to get to.
+
+  - hash - contains `hmac.go` which has some stuff for encypting passwords
+
+  - models - models will be stored here.
     
   - playground - where I go to screw things up.  It's really just a testing ground when I am working on stuff, which is why most
     things are commented out, almost completely.
