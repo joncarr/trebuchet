@@ -27,5 +27,5 @@ command is also passed along with the program.
   - Stuff to hash passwords etc...etc... nothing is really wired together yet, but one day
   
 # Inside the trebuchet folder
-  - You know, I don't really know whay that folder is there.  I just always see people's stuff and it's always got some kind of
+  - You know, I don't really know what that folder is there.  I just always see people's stuff and it's always got some kind of
     doubled up folder structure.  More to come on this when I figure it out.
