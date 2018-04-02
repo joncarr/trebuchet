@@ -1,5 +1,8 @@
 package hash
 
+// TODO: This entire file is probably better suited outside of the app in general and just used as a package when creating the app
+// * Leave the file inside of app directory for now until we see how this can be yanked out...
+
 import (
 	"crypto/hmac"
 	"crypto/sha256"

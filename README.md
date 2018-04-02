@@ -1,3 +1,5 @@
+## DANGER: NOT EVEN REMOTELY CLOSE TO BEING READY TO USE.  (But you're welcome to have a look)
+
 # Trebuchet
 A tool to scaffold projects quickly.  Similiar to others, Ponzu, Buffalo, Fragmenta, etc.  Not intended to be a replacement to 
 such projects, but something aimed at how I personally like to do things.  
