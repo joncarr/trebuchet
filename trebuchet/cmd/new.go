@@ -2,14 +2,21 @@ package cmd
 
 import (
 	"fmt"
+	"log"
+	"os"
 
 	"github.com/spf13/cobra"
 )
 
 var (
+	// ProjectName is the name of the name supplied from the CLI tool
 	ProjectName string
-	HTML        bool
-	Vue         bool
+
+	// HTML stores the value of the HTML flag
+	HTML bool
+
+	// Vue stores the value of the vue flag
+	Vue bool
 )
 
 var newCmd = &cobra.Command{
@@ -33,7 +40,20 @@ var newCmd = &cobra.Command{
 			msg += "\nThis will create a directory within your $GOPATH/src."
 			return fmt.Errorf("%s", msg)
 		}
-		// return newProjectInDir(projectName)
+
+		// Get the current working directory the 'new' command was executed in
+		// this path MUST be in users $GOPATH
+		wd, err := os.Getwd()
+		if err != nil {
+			log.Fatal(err)
+			os.Exit(1)
+		}
+
+		env := os.Getenv("GOPATH")
+
+		fmt.Println("Working Directory:", wd)
+		fmt.Println("GOPATH:", env)
+
 		return nil
 	},
 }
